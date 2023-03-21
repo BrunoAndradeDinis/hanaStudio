@@ -1,0 +1,39 @@
+:root {
+    --fundo-preto: #0c0c0c;
+    --texto: #EAE2DA;
+}
+
+body {
+    background-color: var(--fundo-preto);
+    max-width: 1920px;
+    color: var(--texto);
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.cabecalho__nav--lista {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin-right: 9rem;
+}
+
+.cabecalho__nav--lista > li a{
+    display: inline-block;
+    color: var(--texto);
+    font-size: 3rem;
+    transition: 0.3s;
+    font-weight: 800;
+}
+
+.cabecalho__nav--lista > li a:hover{
+    transform: scale(1.1);
+}

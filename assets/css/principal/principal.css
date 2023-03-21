@@ -1,0 +1,56 @@
+.principal__espaco{
+    padding-top: 17vh;
+    mask-type: alpha;
+    mask-image: url(../../images/LOGO\ ROSA\ 1.png);
+}
+
+.principal__logo {
+    align-items: center;
+    background-image: url(../../images/Mask\ group.png);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.principal__info{
+    height: 70rem;
+    gap: 10px;
+    display: flex;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+}
+.principal__info > div {
+    margin: 0 auto;
+    padding: 0 auto;
+    gap: 4rem;
+}
+
+.principal__info > div p {
+    text-align: left;
+    font-size: 3.2rem;
+    padding: 0 auto;
+    margin: 0 auto 5rem;
+}
+
+.principal__info > div .botoes{
+    margin: 4rem auto 0;
+}
+
+.principal__imagens > img {
+    filter: grayscale(100%);
+    transition: 0.3s;
+    width: 33%;
+    cursor: pointer;
+}
+
+.principal__imagens > img:hover{
+    filter: grayscale(0);
+    transform: scale(.9) rotate(-10deg);
+    border-radius: 10px;
+}
+
+
+.principal__imagens .botoes{
+    margin: 4rem auto 0;
+}

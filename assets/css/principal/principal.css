@@ -46,7 +46,7 @@
 
 .principal__imagens > img:hover{
     filter: grayscale(0);
-    transform: scale(.9) rotate(-10deg);
+    transform: scale(.9);
     border-radius: 10px;
 }
 

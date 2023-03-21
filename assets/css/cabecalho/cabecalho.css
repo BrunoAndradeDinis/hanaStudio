@@ -13,7 +13,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, .8);
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -31,7 +31,6 @@ body {
     color: var(--texto);
     font-size: 3rem;
     transition: 0.3s;
-    font-weight: 800;
 }
 
 .cabecalho__nav--lista > li a:hover{

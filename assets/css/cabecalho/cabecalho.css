@@ -3,25 +3,25 @@
     --texto: #EAE2DA;
 }
 
-body {
-    background-color: var(--fundo-preto);
-    max-width: 1920px;
-    color: var(--texto);
-}
-
 .cabecalho {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, .8);
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 100;}
+
+.cabecalho__logo a h1 img {
+    height: 7rem;
 }
 
+.cabecalho a[href="#"]{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: solid;
+}
 .cabecalho__nav--lista {
     display: flex;
-    gap: 2rem;
+    gap: 6rem;
     list-style: none;
     margin-right: 9rem;
 }
@@ -29,10 +29,12 @@ body {
 .cabecalho__nav--lista > li a{
     display: inline-block;
     color: var(--texto);
-    font-size: 3rem;
-    transition: 0.3s;
+    font-size: 2rem;
+    transition: 0.2s ease-in-out;
+    padding: 1rem;
+
 }
 
 .cabecalho__nav--lista > li a:hover{
-    transform: scale(1.1);
+    border: solid;
 }

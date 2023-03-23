@@ -1,3 +1,8 @@
+* {
+    scroll-behavior: smooth;
+    font-weight: 700;
+}
+
 .botoes {
     display: flex;
     font-size: 32px;
@@ -11,8 +16,43 @@
     padding-bottom: 1rem;
     transition: .3s;
     cursor: pointer;
+    background: linear-gradient(to right, black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
 }
 
 .botoes:hover{
     transform: scale(.9);
+    background-position: left bottom;
+    color: var(--texto);
+}
+
+aside {
+    display: block;
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+}
+
+aside a {
+    display: block;
+    font-size: 5rem;
+}
+
+.principal__imagens a[href="#logo"]{
+    display: none;
+    position: fixed;
+    right: 10%;
+    bottom: 10%;
+    font-size: 4rem;
+    transition: 1.8s ease-in-out;
+    transform: rotate(-90deg);
+}
+
+.principal__imagens:hover a[href="#logo"]{
+    color: var(--texto);
+    line-height: 2rem;
+    transition: 1.8s ease-in-out;
+    display: block;
 }

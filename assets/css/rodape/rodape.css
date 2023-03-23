@@ -1,5 +1,15 @@
+footer {
+    max-height: 50em;
+}
 footer > p {
     font-weight: 300;
-    font-size: 2.8rem;
-    margin: 4.4rem 9.6rem;
+    font-size: 1.8rem;
+    margin: 4rem 7.6rem;
+}
+
+footer {
+    display: flex;
+    position: fixed;
+    z-index: initial;
+    bottom: 0;
 }

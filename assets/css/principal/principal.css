@@ -3,7 +3,6 @@ body {
     max-width: 1920px;
     height: 100vh;
     color: var(--texto);
-    scroll-timeline-axis: vertical;
 }
 body::-webkit-scrollbar{
     width: 0;

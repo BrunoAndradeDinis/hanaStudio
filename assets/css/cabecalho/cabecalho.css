@@ -32,7 +32,7 @@
     font-size: 2rem;
     transition: 0.2s ease-in-out;
     padding: 1rem;
-
+    border: solid 3px transparent;
 }
 
 .cabecalho__nav--lista > li a:hover{

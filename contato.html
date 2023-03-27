@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="./assets/css/principal/principal.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape.css">
     <style>
-        .principal {
-            height: 160vh;
+        .principal__contato {
+            height: 160vh !important;
             width: 100vw;
             display: flex;
             flex-direction: column;
@@ -29,8 +29,13 @@
             align-items: center;
         }
 
+        section {
+            margin: 30vh auto 0 auto;
+        }
+
         fieldset {
             margin: 1rem;
+            background-color: #0c0c0c;
         }
 
         legend {
@@ -82,7 +87,6 @@
             padding-left: 1rem;
             color: var(--texto);
         }
-
     </style>
 
 </head>
@@ -92,7 +96,9 @@
     <header class="cabecalho">
         <div class="cabecalho__logo">
             <a href="./index.html">
-                <h1><img class="cabecalho__logo img" src="./assets/images/Group 63.png" alt="Studio Hana logotigo"></h1>
+                <h1>
+                    <img class="cabecalho__logo img" src="./assets/images/Group 63.png" alt="Studio Hana logotigo">
+                </h1>
             </a>
         </div>
         <nav>
@@ -106,124 +112,158 @@
         </nav>
     </header>
     <!-- Main  -->
-    <div class="principal">
-        <aside class="atendimento">
+    <div class="principal__contato">
+        <section>
+            <aside class="atendimento">
+                <fieldset>
+                    <legend>Atendimento</legend>
+                    <p>Segunda à sexta</p>
+
+                    <p>Das 9h às 18h</p>
+
+                    <a href="mailto:oi@hana.studio?subject=Assunto do email&body=Olá Studio Hana!">oi@hana.studio</a>
+
+                    <a
+                        href="https://api.whatsapp.com/send?phone=5516993517672&text=Ol%C3%A1%20como%20fa%C3%A7o%20pra%20contratar%20os%20seus%20servi%C3%A7os%3F%20">(16)
+                        99351-7672</a>
+                </fieldset>
+            </aside>
             <fieldset>
-                <legend>Atendimento</legend>
-                <p>Segunda à sexta</p>
+                <legend>Dados para contato</legend>
+                <form action="#" class="principal__forms">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="dados_contato" id="nome" placeholder="Nome" required>
 
-                <p>Das 9h às 18h</p>
+                    <label for="email">E-mail</label>
+                    <input type="email" name="e-mail" id="email" placeholder="Seu e-mail" required>
 
-                <a href="mailto:oi@hana.studio?subject=Assunto do email&body=Olá Studio Hana!">oi@hana.studio</a>
-
-                <a
-                    href="https://api.whatsapp.com/send?phone=5516993517672&text=Ol%C3%A1%20como%20fa%C3%A7o%20pra%20contratar%20os%20seus%20servi%C3%A7os%3F%20">(16)
-                    99351-7672</a>
+                    <label for="whats"> Whats</label>
+                    <input type="tel" name="whatsApp" id="whats" placeholder="Seu WhatsApp" required>
+                </form>
             </fieldset>
-        </aside>
-        <fieldset>
-            <legend>Dados para contato</legend>
-            <form action="#" class="principal__forms">
-                <label for="nome">Nome</label>
-                <input type="text" name="dados_contato" id="nome" placeholder="Nome" required>
 
-                <label for="email">E-mail</label>
-                <input type="email" name="e-mail" id="email" placeholder="Seu e-mail" required>
+            <fieldset>
+                <legend>Qual tipo de serviço você está buscando?</legend>
+                <form action="#" class="principal__forms" required>
+                    <label for="branding">
+                        <input type="checkbox" name="dados-orcamento" id="branding" value="Branding">
+                        Branding
+                    </label>
 
-                <label for="whats"> Whats</label>
-                <input type="tel" name="whatsApp" id="whats" placeholder="Seu WhatsApp" required>
-            </form>
-        </fieldset>
+                    <label for="id_visual">
+                        <input type="checkbox" name="dados-orcamento" id="id_visual" value="Identidade Visual">
+                        Identidade Visual
+                    </label>
 
-        <fieldset>
-            <legend>Qual tipo de serviço você está buscando?</legend>
-            <form action="#" class="principal__forms" required>
-                <label for="branding">
-                    <input type="checkbox" name="dados-orcamento" id="branding" value="Branding">
-                    Branding
-                </label>
+                    <label for="s_media">
+                        <input type="checkbox" name="dados-orcamento" id="s_media" value="Social media">
+                        Social media
+                    </label>
 
-                <label for="id_visual">
-                    <input type="checkbox" name="dados-orcamento" id="id_visual" value="Identidade Visual">
-                    Identidade Visual
-                </label>
+                    <label for="packaging">
+                        <input type="checkbox" name="dados-orcamento" id="packaging" value="Packaging">
+                        Packaging
+                    </label>
 
-                <label for="s_media">
-                    <input type="checkbox" name="dados-orcamento" id="s_media" value="Social media">
-                    Social media
-                </label>
+                    <label for="outro">
+                        <input type="checkbox" name="dados-orcamento" id="outro" value="Outro">
+                        Outro
+                    </label>
 
-                <label for="packaging">
-                    <input type="checkbox" name="dados-orcamento" id="packaging" value="Packaging">
-                    Packaging
-                </label>
+                </form>
+            </fieldset>
+            <fieldset>
+                <legend>Qual o seu budget disponível pra esse projeto? </legend>
+                <form action="#" class="principal__forms">
+                    <label for="entre800">
+                        <input type="radio" name="budget" id="entre800" value="entre R$800 e R$1000" checked>
+                        entre R$800 e R$1000
+                    </label>
 
-                <label for="outro">
-                    <input type="checkbox" name="dados-orcamento" id="outro" value="Outro">
-                    Outro
-                </label>
+                    <label for="entre1000">
+                        <input type="radio" name="budget" id="entre1000" value="entre R$1000 e R$1500">
+                        entre R$1000 e R$1500
+                    </label>
 
-            </form>
-        </fieldset>
-        <fieldset>
-            <legend>Qual o seu budget disponível pra esse projeto? </legend>
-            <form action="#" class="principal__forms">
-                <label for="entre800">
-                    <input type="radio" name="budget" id="entre800" value="entre R$800 e R$1000" checked>
-                    entre R$800 e R$1000
-                </label>
+                    <label for="entre1500">
+                        <input type="radio" name="budget" id="entre1500" value="entre R$1500 e R$2500">
+                        entre R$1500 e R$2500
+                    </label>
 
-                <label for="entre1000">
-                    <input type="radio" name="budget" id="entre1000" value="entre R$1000 e R$1500">
-                    entre R$1000 e R$1500
-                </label>
+                    <label for="entre2500">
+                        <input type="radio" name="budget" id="entre2500" value="entre R$2500 e R$3000">
+                        entre R$2500 e R$3000
+                    </label>
 
-                <label for="entre1500">
-                    <input type="radio" name="budget" id="entre1500" value="entre R$1500 e R$2500">
-                    entre R$1500 e R$2500
-                </label>
+                    <label for="acima3000">
+                        <input type="radio" name="budget" id="acima3000" value="acima de R$3000">
+                        acima de R$3000
+                    </label>
+                </form>
+            </fieldset>
+            <fieldset>
+                <legend>Onde encontrou o HANA studio?</legend>
+                <form action="#" class="principal__forms">
+                    <label for="google">
+                        <input type="radio" name="donde" id="google" value="Google" checked>
+                        Google
+                    </label>
 
-                <label for="entre2500">
-                    <input type="radio" name="budget" id="entre2500" value="entre R$2500 e R$3000">
-                    entre R$2500 e R$3000
-                </label>
+                    <label for="redes__sociais">
+                        <input type="radio" name="donde" id="redes__sociais" value="Redes sociais">
+                        Redes sociais
+                    </label>
 
-                <label for="acima3000">
-                    <input type="radio" name="budget" id="acima3000" value="acima de R$3000">
-                    acima de R$3000
-                </label>
-            </form>
-        </fieldset>
-        <fieldset>
-            <legend>Onde encontrou o HANA studio?</legend>
-            <form action="#" class="principal__forms">
-                <label for="google">
-                    <input type="radio" name="donde" id="google" value="Google" checked>
-                    Google
-                </label>
+                    <label for="indication">
+                        <input type="radio" name="donde" id="indication" value="Indicação">
+                        Indicação
+                    </label>
 
-                <label for="redes__sociais">
-                    <input type="radio" name="donde" id="redes__sociais" value="Redes sociais">
-                    Redes sociais
-                </label>
-
-                <label for="indication">
-                    <input type="radio" name="donde" id="indication" value="Indicação">
-                    Indicação
-                </label>
-
-                <label for="outros">
-                    <input type="radio" name="donde" id="outros" value="Outro">
-                    Outro
-                </label>
-            </form>
-        </fieldset>
-        <button type="submit" class="botoes">enviar</button>
+                    <label for="outros">
+                        <input type="radio" name="donde" id="outros" value="Outro">
+                        Outro
+                    </label>
+                </form>
+            </fieldset>
+            <button type="submit" class="botoes" onclick="formulario()">enviar</button>
+        </section>
     </div>
     <!-- Footer  -->
     <footer>
         <p>@ 2023 HANA studio</p>
     </footer>
+
+    <script>
+        function formulario() {
+            let nome = document.getElementById("nome");
+            console.log(nome.value);
+
+            let email = document.getElementById("email");
+            console.log(email.value);
+
+            let whats = document.getElementById("whats");
+            console.log(whats.value);
+
+            const dados__pessoais = [nome.value, email.value, whats.value];
+            console.log(dados__pessoais);
+
+            const checkboxes = document.querySelectorAll('input[type=checkbox][name=dados-orcamento]:checked');
+            console.log(checkboxes.values)
+
+            let valores = [];
+
+            if (checkboxes.length > 0) {
+                checkboxes.forEach((checkbox) => {
+                    valores.push(checkbox.value);
+                });
+            }
+
+
+            console.log(valores)
+
+            alert("Agora é só aguardar o nosso retorno em até 3 dias úteis!")
+        }
+    </script>
 </body>
 
 </html>

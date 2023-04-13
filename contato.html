@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./assets/css/rodape/rodape.css">
     <style>
         .principal__contato {
-            height: 160vh !important;
+            height: 200vh;
             width: 100vw;
             display: flex;
             flex-direction: column;
@@ -29,16 +29,16 @@
             align-items: center;
         }
 
-        section {
-            margin: 30vh auto 0 auto;
+        .principal__contato section {
+            margin: 40vh auto 0 auto;
         }
 
-        fieldset {
+        .principal__contato fieldset {
             margin: 1rem;
             background-color: #0c0c0c;
         }
 
-        legend {
+        .principal__contato legend {
             font-size: 2rem;
             background-color: rgba(255, 255, 255, 0.2);
             padding: 0 1rem;
@@ -49,9 +49,8 @@
             width: 55vw;
         }
 
-        .principal__form input {
+        .principal__forms input {
             margin: 1rem;
-            border-radius: 20%;
         }
 
         .principal__forms label {
@@ -65,11 +64,19 @@
 
         .principal__forms #nome,
         .principal__forms #email,
-        .principal__forms #whats {
+        .principal__forms #whats,
+        .principal__forms #projeto {
             width: 50%;
             height: 3rem;
             font-size: 2rem;
             padding-left: 1rem;
+        }
+
+        .principal__forms #projeto {
+            resize: none;
+            height: 20rem;
+            padding: 0.5rem;
+            width: 60%;
         }
 
         .atendimento {
@@ -87,7 +94,9 @@
             padding-left: 1rem;
             color: var(--texto);
         }
+
     </style>
+
 
 </head>
 
@@ -128,23 +137,30 @@
                         99351-7672</a>
                 </fieldset>
             </aside>
-            <fieldset>
-                <legend>Dados para contato</legend>
-                <form action="#" class="principal__forms">
+            <form>
+                <fieldset class="principal__forms" onshow="automa()">
+                    <legend>Dados para contato</legend>
+
                     <label for="nome">Nome</label>
-                    <input type="text" name="dados_contato" id="nome" placeholder="Nome" required>
+                    <input type="text" name="dados_contato" id="nome" placeholder="Seu nome"
+                        class="input-container--invalido" required>
+                    <span class="input-mensagem-erro">Este campo não está válido</span>
 
                     <label for="email">E-mail</label>
-                    <input type="email" name="e-mail" id="email" placeholder="Seu e-mail" required>
+                    <input type="email" name="dados_contato" id="email" placeholder="Seu e-mail"
+                        class="input-container--invalido" required>
+                    <span class="input-mensagem-erro">Este campo não está válido</span>
 
                     <label for="whats"> Whats</label>
-                    <input type="tel" name="whatsApp" id="whats" placeholder="Seu WhatsApp" required>
-                </form>
-            </fieldset>
+                    <input type="tel" name="dados_contato" id="whats" placeholder="Seu WhatsApp"
+                        class="input-container--invalido" required>
+                    <span class="input-mensagem-erro">Este campo não está válido</span>
 
-            <fieldset>
-                <legend>Qual tipo de serviço você está buscando?</legend>
-                <form action="#" class="principal__forms" required>
+                </fieldset>
+
+                <fieldset class="principal__forms">
+                    <legend>Qual tipo de serviço você está buscando?</legend>
+
                     <label for="branding">
                         <input type="checkbox" name="dados-orcamento" id="branding" value="Branding">
                         Branding
@@ -170,11 +186,11 @@
                         Outro
                     </label>
 
-                </form>
-            </fieldset>
-            <fieldset>
-                <legend>Qual o seu budget disponível pra esse projeto? </legend>
-                <form action="#" class="principal__forms">
+
+                </fieldset>
+                <fieldset class="principal__forms">
+                    <legend>Qual o seu budget disponível pra esse projeto? </legend>
+
                     <label for="entre800">
                         <input type="radio" name="budget" id="entre800" value="entre R$800 e R$1000" checked>
                         entre R$800 e R$1000
@@ -199,11 +215,16 @@
                         <input type="radio" name="budget" id="acima3000" value="acima de R$3000">
                         acima de R$3000
                     </label>
-                </form>
-            </fieldset>
-            <fieldset>
-                <legend>Onde encontrou o HANA studio?</legend>
-                <form action="#" class="principal__forms">
+
+                </fieldset>
+                <fieldset class="principal__forms">
+                    <legend>Adicione aqui todos os detalhes importantes sobre seu projeto:</legend>
+
+                    <textarea name="dados_dontato" id="projeto" cols="30" rows="10"></textarea>
+                </fieldset>
+                <fieldset class="principal__forms">
+                    <legend>Onde encontrou o HANA studio?</legend>
+
                     <label for="google">
                         <input type="radio" name="donde" id="google" value="Google" checked>
                         Google
@@ -223,9 +244,11 @@
                         <input type="radio" name="donde" id="outros" value="Outro">
                         Outro
                     </label>
-                </form>
-            </fieldset>
+
+                </fieldset>
+            </form>
             <button type="submit" class="botoes" onclick="formulario()">enviar</button>
+            <!-- onclick="formulario()" -->
         </section>
     </div>
     <!-- Footer  -->
@@ -233,36 +256,7 @@
         <p>@ 2023 HANA studio</p>
     </footer>
 
-    <script>
-        function formulario() {
-            let nome = document.getElementById("nome");
-            console.log(nome.value);
-
-            let email = document.getElementById("email");
-            console.log(email.value);
-
-            let whats = document.getElementById("whats");
-            console.log(whats.value);
-
-            const dados__pessoais = [nome.value, email.value, whats.value];
-            console.log(dados__pessoais);
-
-            const checkboxes = document.querySelectorAll('input[type=checkbox][name=dados-orcamento]:checked');
-            console.log(checkboxes.values)
-
-            let valores = [];
-
-            if (checkboxes.length > 0) {
-                checkboxes.forEach((checkbox) => {
-                    valores.push(checkbox.value);
-                });
-            }
-
-
-            console.log(valores)
-
-            alert("Agora é só aguardar o nosso retorno em até 3 dias úteis!")
-        }
+    <script src="./assets/js/fomulario.js">
     </script>
 </body>
 

@@ -13,3 +13,17 @@ footer {
     z-index: initial;
     bottom: 0;
 }
+
+@media (max-width: 700px){
+    footer {
+        margin: 1rem auto 0;
+        position: static;
+        display: block;
+        text-align: center;
+    }
+
+    footer > p {
+        margin: 4rem 7.6rem;
+        display: block;
+    }
+}

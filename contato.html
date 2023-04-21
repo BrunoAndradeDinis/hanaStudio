@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="./assets/css/rodape/rodape.css">
     <style>
         .principal__contato {
-            height: 200vh;
             width: 100vw;
             display: flex;
             flex-direction: column;
@@ -30,7 +29,7 @@
         }
 
         .principal__contato section {
-            margin: 40vh auto 0 auto;
+            margin: 0 auto 0 auto;
         }
 
         .principal__contato fieldset {
@@ -82,6 +81,7 @@
         .atendimento {
             height: 80vh;
             width: 20rem;
+            margin: 0 auto;
         }
 
         .atendimento fieldset {
@@ -93,6 +93,71 @@
             font-size: 2rem;
             padding-left: 1rem;
             color: var(--texto);
+        }
+
+        .formularios {
+            display: flex;
+            padding-top: 10vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        @media (max-width: 1100px) {
+
+            .atendimento {
+                margin-left: 6em;
+                position: relative;
+                height: auto;
+                font-size: 1rem;
+                width: 57vw;
+                align-self: center;
+            }
+
+            textarea {
+                border: 1px solid;
+                /* width: 80% !important; */
+                /* height: 10rem !important; */
+            }
+
+
+        }
+
+        @media (max-width: 700px) {
+
+            .atendimento {
+                margin-left: 4em !important;
+                position: relative;
+                height: auto;
+                font-size: 1rem;
+                width: 57vw;
+                align-self: center;
+                margin: auto;
+            }
+
+            textarea {
+                border: 1px solid;
+                width: 90% !important;
+                height: 10rem !important;
+            }
+
+            .principal__forms input[placeholder] {
+                width: 90% !important;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            .formularios {
+                padding-top: 0;
+            }
+
+            .atendimento {
+                position: relative;
+                font-size: 1rem;
+                width: 100%;
+                margin-left: 2em !important;
+            }
         }
     </style>
 
@@ -121,7 +186,7 @@
     </header>
     <!-- Main  -->
     <div class="principal__contato">
-        <section>
+        <section class="formularios">
             <aside class="atendimento">
                 <fieldset>
                     <legend>Atendimento</legend>
@@ -219,7 +284,7 @@
                 <fieldset class="principal__forms">
                     <legend>Adicione aqui todos os detalhes importantes sobre seu projeto:</legend>
 
-                    <textarea name="dados_dontato" id="projeto" cols="30" rows="10"></textarea>
+                    <textarea name="dados_dontato" id="projeto"></textarea>
                 </fieldset>
                 <fieldset class="principal__forms">
                     <legend>Onde encontrou o HANA studio?</legend>

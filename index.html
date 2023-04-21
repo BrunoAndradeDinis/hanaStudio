@@ -19,7 +19,18 @@
     <link rel="stylesheet" href="./assets/css/cabecalho/cabecalho.css">
     <link rel="stylesheet" href="./assets/css/principal/principal.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape.css">
+    <link rel="stylesheet" href="./assets/css/reponsive/principal-responsive.css">
+    <style>
+        @media (max-width: 700px) {
+            .texto__artigos p {
+                display: none;
+            }
 
+            .texto__artigos a {
+                display: block;
+            }
+        }
+    </style>
 
 </head>
 
@@ -31,7 +42,13 @@
                 <h1><img class="cabecalho__logo img" src="./assets/images/Group 63.png" alt="Studio Hana logotigo"></h1>
             </a>
         </div>
-        <nav>
+        <nav class="cabecalho__nav">
+            <!-- <input type="checkbox" id="menu-hamburguer">
+            <label for="menu-hamburguer">
+                <div class="menu">
+                    <span class="hamburguer"></span>
+                </div>
+            </label> -->
             <ul class="cabecalho__nav--lista">
                 <li><a href="#">home</a></li>
                 <li><a href="./sobre.html">sobre</a></li>
@@ -56,64 +73,66 @@
 
         </div>
         <div class="principal__imagens" id="imagens">
-            <a href="https://www.behance.net/gallery/130494319/Feito"><img src="./assets/images/capa 8.png"
-                    alt="Empresa Fei tô! "></a>
-            <a href="https://www.behance.net/gallery/146637011/Glow-Up-Nutrition"><img src="./assets/images/capa 7.png"
-                    alt="Empresa Glow up"></a>
-            <a href="https://www.behance.net/gallery/144696509/Lady-Lucy"><img src="./assets/images/capa 9.png"
-                    alt="Empesa Lady Lucy"> </a>
+            <a href="#"><img src="./assets/images/capa 8.png" alt="Empresa Fei tô! "></a>
+            <a href="#"><img src="./assets/images/capa 7.png" alt="Empresa Glow up"></a>
+            <a href="#"><img src="./assets/images/capa 9.png" alt="Empesa Lady Lucy"> </a>
 
             <button type="button" class="botoes">+ portfólio</button>
             <a href="#logo"> > </a>
         </div>
-        <div class="principal__artigos">
-            <div class="conteudo__artigos">
-                <img src="./assets/images/bonekin.png" alt="Boneco articulado">
-                <div class="texto__artigos">
-                    <h2>Anatomia de uma marca</h2>
-                    <span>Hana / 2022</span>
-                    <p>Posicionamento e estratégia
+        <div>
+            <div class="principal__artigos">
+                <div class="conteudo__artigos">
+                    <img src="./assets/images/bonekin.png" alt="Boneco articulado">
+                    <div class="texto__artigos">
+                        <h2>Anatomia de uma marca</h2>
+                        <span>Hana / 2022</span>
+                        <p>Posicionamento e estratégia
 
-                        Por questões de simplificação, a gente vai colocar aqui no posicionamento toda aquela parte de
-                        propósito da marca, missão, visão, valores, bandeiras, definição de persona e proposta de valor.
-                    </p>
-                    <a href="#">+</a>
-                </div>
-                
-            </div>
-            <div class="conteudo__artigos">
-                <img src="./assets/images/livro.png" alt="Pessoa lendo um livro">
-                <div class="texto__artigos">
-                    <h2>Resenha - O Design Como Storytelling</h2>
-                    <span>Hana / 2022</span>
-                    <p>Ellen Lupton é um grande nome no universo do design gráfico e, em especial, da tipografia. Além
-                        de
-                        autora, Ellen é curadora sênior de design contemporâneo na Cooper Hewitt, Smithsonian Design
-                        Museum,
-                        diretora fundadora do Graphic Design M.F.A e também atua como diretora do Center for Design
-                        Thinking. Já escreveu diversos livros sobre o assunto e é, com certeza, uma grande referência.
-                    </p>
-                    <a href="#">+</a>
-                </div>
-                <button type="button" class="botoes">+ artigos</button>
-            </div>
-            <div class="conteudo__artigos">
-                <img src="./assets/images/noteboook.png"
-                    alt="Sala de escritório com um notebook e um celular com a tela virada para baixo">
-                <div class="texto__artigos">
-                    <h2>Workflow - Identidade Visual</h2>
-                    <span>Hana / 2022</span>
-                    <p>Uma identidade visual bem trabalhada provoca percepções e, consequentemente, torna uma marca
-                        identificável e memorável. Neste post apresentamos nosso processo de trabalho em projetos de
-                        identidades visuais e quais passos seguimos para alcançarmos os resultados de identificação e
-                        mnemônico que sempre buscamos.</p>
+                            Por questões de simplificação, a gente vai colocar aqui no posicionamento toda aquela parte
+                            de
+                            propósito da marca, missão, visão, valores, bandeiras, definição de persona e proposta de
+                            valor.
+                        </p>
                         <a href="#">+</a>
+                    </div>
+
                 </div>
-                
+                <div class="conteudo__artigos">
+                    <img src="./assets/images/livro.png" alt="Pessoa lendo um livro">
+                    <div class="texto__artigos">
+                        <h2>Resenha - O Design Como Storytelling</h2>
+                        <span>Hana / 2022</span>
+                        <p>Ellen Lupton é um grande nome no universo do design gráfico e, em especial, da tipografia.
+                            Além
+                            de
+                            autora, Ellen é curadora sênior de design contemporâneo na Cooper Hewitt, Smithsonian Design
+                            Museum,
+                            diretora fundadora do Graphic Design M.F.A e também atua como diretora do Center for Design
+                            Thinking. Já escreveu diversos livros sobre o assunto e é, com certeza, uma grande
+                            referência.
+                        </p>
+                        <a href="#">+</a>
+                    </div>
+                </div>
+                <div class="conteudo__artigos">
+                    <img src="./assets/images/noteboook.png"
+                        alt="Sala de escritório com um notebook e um celular com a tela virada para baixo">
+                    <div class="texto__artigos">
+                        <h2>Workflow - Identidade Visual</h2>
+                        <span>Hana / 2022</span>
+                        <p>Uma identidade visual bem trabalhada provoca percepções e, consequentemente, torna uma marca
+                            identificável e memorável. Neste post apresentamos nosso processo de trabalho em projetos de
+                            identidades visuais e quais passos seguimos para alcançarmos os resultados de identificação
+                            e
+                            mnemônico que sempre buscamos.</p>
+                        <a href="#">+</a>
+                    </div>
+                </div>
             </div>
-            
         </div>
     </div>
+
 
     <!-- Footer  -->
     <footer>
